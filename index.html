@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Bonfim - CRO & Revenue Engineer | TRACTION X</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+      :root {
+        --primary-blue: #0066cc;
+        --accent-orange: #ff6b35;
+        --light-bg: #f8f9ff;
+        --text-dark: #1a1a2e;
+        --text-light: #666;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.7;
+        color: var(--text-dark);
+        background: #ffffff;
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-orange) 100%);
+        padding: 16px 40px;
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      nav .logo {
+        color: white;
+        font-weight: 800;
+        font-size: 1.3em;
+        letter-spacing: 2px;
+        text-decoration: none;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s ease;
+      }
+      nav a:hover {
+        opacity: 0.8;
+      }
+      .hero {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-orange) 100%);
+        color: white;
+        padding: 80px 40px;
+        text-align: center;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: 3.5em;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .hero .tagline {
+        font-size: 1.4em;
+        opacity: 0.95;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .hero .subtitle {
+        font-size: 1em;
+        opacity: 0.85;
+        max-width: 600px;
+        margin-bottom: 40px;
+      }
+      .cta-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+        font-size: 1em;
+      }
+      .btn-primary {
+        background: white;
+        color: var(--primary-blue);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+      .btn-secondary:hover {
+        background: white;
+        color: var(--primary-blue);
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+      section {
+        padding: 80px 40px;
+        border-bottom: 1px solid #e0e0ff;
+      }
+      section h2 {
+        font-size: 2.2em;
+        color: var(--primary-blue);
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      section h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--accent-orange));
+      }
+      .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+      .achievement-card {
+        background: var(--light-bg);
+        padding: 30px;
+        border-radius: 12px;
+        border-left: 5px solid var(--accent-orange);
+        transition: all 0.3s ease;
+      }
+      .achievement-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 102, 204, 0.15);
+      }
+      .achievement-card .metric {
+        font-size: 1.8em;
+        font-weight: 800;
+        color: var(--accent-orange);
+        margin-bottom: 8px;
+      }
+      .achievement-card .label {
+        color: var(--text-dark);
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      .achievement-card .detail {
+        color: var(--text-light);
+        font-size: 0.95em;
+      }
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .tag {
+        background: linear-gradient(135deg, var(--primary-blue), var(--accent-orange));
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 500;
+      }
+      .tag:hover {
+        transform: scale(1.05);
+      }
+      footer {
+        background: var(--text-dark);
+        color: white;
+        text-align: center;
+        padding: 50px 40px;
+      }
+      footer h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+      footer .tagline {
+        color: var(--accent-orange);
+        margin-bottom: 25px;
+        font-weight: 500;
+      }
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+      .contact-links a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+      .contact-links a:hover {
+        background: var(--accent-orange);
+        border-color: var(--accent-orange);
+      }
+      @media (max-width: 768px) {
+        .hero h1 { font-size: 2.5em; }
+        section { padding: 50px 20px; }
+        .container { padding: 0 20px; }
+      }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">TRACTION X</a>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#conquistas">Conquistas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Danilo Bonfim</h1>
+        <div class="tagline">Chief Revenue Officer & Revenue Engineer</div>
+        <div class="subtitle">Transformando caos em máquinas de receita previsível. 20+ anos em GTM, RevOps e equipes de alta performance.</div>
+        <div class="cta-buttons">
+            <a href="#contato" class="btn btn-primary">Entrar em Contato</a>
+            <a href="https://linkedin.com/in/danbonfim" target="_blank" class="btn btn-secondary">Ver LinkedIn</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre</h2>
+            <p style="font-size: 1.1em; line-height: 1.8; max-width: 800px;">
+              CRO e especialista em Revenue Engineering com 20+ anos em Marketing, Vendas, Inovação e Customer Success.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.8; max-width: 800px; margin-top: 15px;">
+              Histórico comprovado de gerar mais de R$500 milhões em novas receitas, transformando estratégias em resultados.
+            </p>
+        </div>
+    </section>
+
+    <section id="conquistas">
+        <div class="container">
+            <h2>Principais Conquistas</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="metric">R$120M</div>
+                    <div class="label">Em 6 meses</div>
+                    <div class="detail">Fast Shop - Expansão B2B + Zoho CRM</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="metric">R$300M</div>
+                    <div class="label">ARR gerado</div>
+                    <div class="detail">Grupo Ambipar - RevOps + SLA 2min</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="metric">600%</div>
+                    <div class="label">Crescimento Inbound</div>
+                    <div class="detail">Driva - Top 1 Martechs 2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Expertise</h2>
+            <div class="skill-tags">
+                <span class="tag">Revenue Operations</span>
+                <span class="tag">GTM Strategy</span>
+                <span class="tag">Sales Playbooks</span>
+                <span class="tag">ABM</span>
+                <span class="tag">Zoho CRM</span>
+                <span class="tag">Agile/Scrum</span>
+                <span class="tag">Outbound/Inbound</span>
+                <span class="tag">IA em Vendas</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Vamos Conversar?</h2>
+            <p style="font-size: 1.1em; max-width: 700px; margin-bottom: 30px;">
+              Se você procura alguém que entenda de Revenue Engineering, GTM, RevOps — vamos conversar.
+            </p>
+            <div class="contact-links">
+                <a href="https://linkedin.com/in/danbonfim" target="_blank">LinkedIn</a>
+                <a href="mailto:tractionxtech@gmail.com">Email</a>
+                <a href="https://wa.me/5511976643515" target="_blank">WhatsApp</a>
+                <a href="https://tractiongrowthx.lovable.app/" target="_blank">TRACTION X</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>TRACTION X</h3>
+        <div class="tagline">Revenue Engineering | Diagnóstico → Blueprint → Build → Transferência</div>
+        <p style="max-width: 700px; margin: 0 auto; margin-bottom: 20px; line-height: 1.6;">
+          Estruturamos máquinas de receita previsível. Diagnóstico profundo, blueprint de 90 dias, sprints de implementação e transferência total.
+        </p>
+        <div style="color: #999; font-size: 0.9em;">
+          © 2024 Danilo Bonfim | TRACTION X - Revenue Engineering & GTM Strategy
+        </div>
+    </footer>
+</body>
+</html>
