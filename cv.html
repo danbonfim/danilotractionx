@@ -191,12 +191,115 @@
      font-size: 12px;
    }
  }
+    
+/* Mobile Responsivity - 480px and below */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .logo {
+    font-size: 16px;
+  }
+  
+  nav a {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  
+  main {
+    padding: 15px 10px;
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  h3 {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  
+  p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  ul {
+    margin-left: 15px;
+  }
+  
+  li {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  
+  .contact {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  footer {
+    padding: 20px 10px;
+    font-size: 11px;
+  }
+  
+  footer a {
+    margin: 0 5px;
+  }
+  
+  .download-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet Responsivity - 768px and below */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  
+  header {
+    padding: 15px 25px;
+  }
+  
+  main {
+    padding: 20px 15px;
+  }
+  
+  h1 {
+    font-size: 26px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  nav a {
+    font-size: 13px;
+  }
+}
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">TRACTION<span>X</span></div>
-    <nav>
+            <a href="https://tractiongrowthx.lovable.app/"><div class="logo">TRACTION<span>X</span></div></a>    <nav>
       <a href="index.html">Voltar</a>
     </nav>
   </header>
