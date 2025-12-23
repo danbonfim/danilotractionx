@@ -227,7 +227,48 @@
       font-size: 14px;
       font-weight: 600;
     }
-    
+
+     .resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .resultado-card {
+    background: linear-gradient(135deg, #e6f0ff 0%, #f0f0ff 100%);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #ff6b35;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .resultado-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .resultado-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0066ff;
+    margin-bottom: 10px;
+  }
+
+  .resultado-empresa {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .resultado-descricao {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.5;
+  }
+
     .cta-section {
       background: #f8f9fa;
       padding: 60px 40px;
@@ -301,6 +342,7 @@
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#expertise">Expertise</a>
+          <a href="#resultados">Resultados</a>
       <a href="#contato" class="cta-btn">Iniciar Conversa</a>
     </nav>
   </header>
@@ -365,6 +407,42 @@
       <div class="expertise-card">
         <h3>IA em Vendas</h3>
         <p>Integração de inteligência artificial em processos comerciais para previsão, qualificação e automação de follow-ups.</p>
+      </div>
+    </div>
+  </section>
+
+   <section id="resultados" class="resultados">
+    <h2>Experiências na <span class="blue">Prática e Resultados</span></h2>
+    <div class="resultados-grid">
+      <div class="resultado-card">
+        <div class="resultado-value">R$ 120M</div>
+        <div class="resultado-empresa">Fast Shop</div>
+        <div class="resultado-descricao">Novas receitas em 6 meses como Head de Vendas B2B</div>
+      </div>
+      <div class="resultado-card">
+        <div class="resultado-value">R$ 300M</div>
+        <div class="resultado-empresa">Grupo Ambipar</div>
+        <div class="resultado-descricao">ARR com nova operação de vendas reestruturada</div>
+      </div>
+      <div class="resultado-card">
+        <div class="resultado-value">R$ 15M</div>
+        <div class="resultado-empresa">Receita Previsível</div>
+        <div class="resultado-descricao">NMRR gerado via consultoria estratégica</div>
+      </div>
+      <div class="resultado-card">
+        <div class="resultado-value">600%</div>
+        <div class="resultado-empresa">Driva</div>
+        <div class="resultado-descricao">Crescimento em Inbound Marketing</div>
+      </div>
+      <div class="resultado-card">
+        <div class="resultado-value">220%</div>
+        <div class="resultado-empresa">Driva</div>
+        <div class="resultado-descricao">Crescimento total da empresa</div>
+      </div>
+      <div class="resultado-card">
+        <div class="resultado-value">Top 1</div>
+        <div class="resultado-empresa">Martechs 2023</div>
+        <div class="resultado-descricao">Reconhecimento na indústria de MarTech</div>
       </div>
     </div>
   </section>
