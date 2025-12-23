@@ -335,6 +335,20 @@
         padding: 40px 20px;
       }
     }
+.cv-section { padding: 60px 20px; background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); }
+.cv-container { max-width: 800px; margin: 0 auto; }
+.cv-header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+.cv-header-section h2 { font-size: 32px; margin: 0; }
+.btn-download-cv { background-color: #ff6b35; color: white; padding: 12px 24px; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; transition: all 0.3s ease; }
+.btn-download-cv:hover { background-color: #e55a25; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3); }
+.btn-large { padding: 16px 32px; font-size: 16px; width: 100%; max-width: 400px; margin: 0 auto; }
+.cv-content { display: grid; gap: 30px; }
+.cv-section-item { background: white; padding: 25px; border-radius: 8px; border-left: 4px solid #0066ff; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+.cv-section-item h3 { color: #0066ff; margin-top: 0; margin-bottom: 15px; font-size: 18px; }
+.cv-section-item p { margin: 10px 0; color: #333; line-height: 1.6; }
+.cv-section-item ul { margin: 10px 0; padding-left: 20px; }
+.cv-section-item li { margin: 8px 0; color: #333; line-height: 1.6; }
+.cv-footer { text-align: center; margin-top: 40px; }
   </style>
 </head>
 <body>
@@ -343,6 +357,7 @@
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#expertise">Expertise</a>         
+ <a href="#cv">CV</a>
             <a href="#contato" class="cta-btn">Iniciar Conversa</a>
     </nav>
   </header>
@@ -446,6 +461,69 @@ cv-photo"></div>
       </div>
     </div>
   </section>
+
+ <section id="cv" class="cv-section">
+  <div class="cv-container">
+   <div class="cv-header-section">
+    <h2>Meu <span class="blue">CV</span></h2>
+    <button onclick="downloadCVPDF()" class="btn-download-cv">📥 Download CV (PDF)</button>
+   </div>
+   <div class="cv-content">
+    <div class="cv-section-item">
+     <h3>Perfil Executivo</h3>
+     <p>Sou Chief Revenue Officer e especialista em crescimento - Growth Expert com mais de 20 anos de experiência em marketing, vendas, inovação e customer success. Tenho histórico comprovado de gerar mais de R$ 500 milhões em novas receitas, transformando estratégias em resultados tangíveis.</p>
+    </div>
+    <div class="cv-section-item">
+     <h3>Principais Conquistas</h3>
+     <ul>
+      <li>R$ 120 milhões em novas receitas em 6 meses - Fast Shop</li>
+      <li>R$ 300 milhões ARR com nova operação de vendas - Grupo Ambipar</li>
+      <li>R$ 15 milhões NMRR via consultoria estratégica - Receita Previsível</li>
+      <li>600% de crescimento em Inbound Marketing - Driva</li>
+      <li>220% de crescimento total da empresa - Driva</li>
+      <li>Top 1 Martechs 2023</li>
+     </ul>
+    </div>
+    <div class="cv-section-item">
+     <h3>Experiência Profissional</h3>
+     <p><strong>Head de Vendas B2B e Growth</strong> - Fast Shop SA (11/2024 a 05/2025)</p>
+     <p>Liderança dos times de Pré-Sales, Hunters, Farmers e Field Sales B2B. Responsável por mais de R$ 120 milhões em novas receitas em 6 meses.</p>
+     <p><strong>Especialista Sênior e Gerente de Projetos</strong> - Receita Previsível (01/2024 a 12/2024)</p>
+     <p>Condução de projetos de implementação de máquinas de vendas. Geração de R$ 15 milhões em NMRR para clientes de diferentes setores.</p>
+     <p><strong>Chief Revenue Officer</strong> - Sociedade Nacional de Agricultura SNA (09/2023 a 11/2024)</p>
+     <p>CRO responsável por 6 empresas do grupo SNA. Estruturação completa da máquina de vendas com automações e metodologias escaláveis.</p>
+    </div>
+    <div class="cv-section-item">
+     <h3>Competências Técnicas</h3>
+     <ul>
+      <li><strong>Revenue Operations:</strong> Predictable Revenue, Sales Enablement, RevOps, SalesOps</li>
+      <li><strong>Growth Marketing:</strong> Inbound/Outbound, Tráfego Pago, Growth Hacking, Social Selling</li>
+      <li><strong>Tecnologias:</strong> HubSpot, Salesforce, Zoho, AWS, Marketo, LinkedIn Sales Navigator</li>
+      <li><strong>Inteligência Artificial:</strong> Aplicações em vendas, automação e análise preditiva</li>
+     </ul>
+    </div>
+    <div class="cv-section-item">
+     <h3>Formação Acadêmica</h3>
+     <ul>
+      <li>Pós-Graduação em Marketing - Pontifícia Universidade Católica de São Paulo (PUC-SP)</li>
+      <li>Big Data e Inteligência Artificial - Universidade Anhembi Morumbi</li>
+      <li>Análise e Desenvolvimento de Sistemas - Faculdade Impacta</li>
+     </ul>
+    </div>
+    <div class="cv-section-item">
+     <h3>Idiomas</h3>
+     <ul>
+      <li>Portugués - Nativo</li>
+      <li>Inglés - Profissional</li>
+      <li>Espanhol - Profissional</li>
+     </ul>
+    </div>
+   </div>
+   <div class="cv-footer">
+    <button onclick="downloadCVPDF()" class="btn-download-cv btn-large">📥 Download CV Completo (PDF)</button>
+   </div>
+  </div>
+ </section>
   
  <section id="sobre" class="about">
   <h2>Sobre <span class="blue">Profissional</span></h2>
@@ -470,5 +548,53 @@ cv-photo"></div>
       <a href="https://tractiongrowthx.lovable.app">Traction X</a>
     </p>
   </footer>
-/body>
+ <script>
+function downloadCVPDF() {
+  const link = document.createElement('a');
+  const cvContent = document.querySelector('.cv-content');
+  if (!cvContent) {
+    alert('Conteúdo do CV não encontrado');
+    return;
+  }
+  const pdfData = 'data:text/html;charset=utf-8,' + encodeURIComponent(
+    '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Danilo Bonfim - CV</title><style>body { font-family: Arial; margin: 20px; } h1 { color: #0066ff; } h2 { color: #0066ff; margin-top: 20px; } li { margin: 8px 0; }</style></head><body>' +
+    '<h1>Danilo Bonfim</h1><p><strong>CRO & Revenue Engineer</strong></p>' +
+    '<h2>Perfil Executivo</h2>' +
+    '<p>Chief Revenue Officer e especialista em crescimento com 20+ anos de experiência. Gerei mais de R$500M em receitas.</p>' +
+    '<h2>Principais Conquistas</h2><ul>' +
+    '<li>R$ 120M em novas receitas - Fast Shop</li>' +
+    '<li>R$ 300M ARR - Grupo Ambipar</li>' +
+    '<li>220% crescimento total - Driva</li>' +
+    '<li>600% crescimento Inbound - Driva</li>' +
+    '<li>Top 1 Martechs 2023</li></ul>' +
+    '<h2>Experiência Profissional</h2>' +
+    '<p><strong>Head de Vendas B2B</strong> - Fast Shop (11/2024 - 05/2025): R$120M em novas receitas</p>' +
+    '<p><strong>Especialista Sênior</strong> - Receita Previsível (01/2024 - 12/2024): R$15M em NMRR</p>' +
+    '<p><strong>CRO</strong> - SNA (09/2023 - 11/2024): 6 empresas do grupo</p>' +
+    '<p><strong>Associate Partner</strong> - Driva (10/2022 - 04/2024): Top 1 Martechs</p>' +
+    '<h2>Competências</h2><ul>' +
+    '<li>Revenue Operations & Sales Strategy</li>' +
+    '<li>Go-to-Market (GTM) Strategy</li>' +
+    '<li>Growth Marketing & Analytics</li>' +
+    '<li>HubSpot, Salesforce, Zoho, AWS</li>' +
+    '<li>IA aplicada a vendas</li></ul>' +
+    '<h2>Formação</h2><ul>' +
+    '<li>Pós-Graduação em Marketing - PUC-SP</li>' +
+    '<li>Big Data e IA - Anhembi Morumbi</li>' +
+    '<li>Análise e Desenvolvimento de Sistemas - Impacta</li></ul>' +
+    '<h2>Idiomas</h2><ul>' +
+    '<li>Português - Nativo</li>' +
+    '<li>Inglês - Profissional</li>' +
+    '<li>Espanhol - Profissional</li></ul>' +
+    '<footer style="margin-top: 30px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center; font-size: 12px; color: #666;">' +
+    '© 2025 Danilo Bonfim | linkedin.com/in/danbonfim' +
+    '</footer></body></html>'
+  );
+  link.href = pdfData;
+  link.download = 'Danilo-Bonfim-CV.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>/body>
 </html>
