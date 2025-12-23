@@ -349,8 +349,8 @@
 .cv-section-item ul { margin: 10px 0; padding-left: 20px; }
 .cv-section-item li { margin: 8px 0; color: #333; line-height: 1.6; }
 .cv-footer { text-align: center; margin-top: 40px; }
-.cv-section { display: none; }
-.cv-section.active { display: block; }
+
+
 .nav-link { background: none; border: none; color: inherit; cursor: pointer; font-size: inherit; padding: 0; }
   </style>
 </head>
@@ -360,7 +360,7 @@
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#expertise">Expertise</a>         
- <button onclick="toggleCV()" class="nav-link">CV</button>
+ <a href="cv.html">CV</a>
             <a href="#contato" class="cta-btn">Iniciar Conversa</a>
     </nav>
   </header>
@@ -600,9 +600,5 @@ function downloadCVPDF() {
   document.body.removeChild(link);
 }
    
-function toggleCV() {
-  const cvSection = document.querySelector('.cv-section');
-  cvSection.classList.toggle('active');
-}
 </script>/body>
 </html>
